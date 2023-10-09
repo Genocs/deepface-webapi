@@ -1,0 +1,41 @@
+# This is a manually triggered dockerhub build and publish
+
+name: Publish to Dockerhub
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      version:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: "Image Version"
+
+        # Default value if no value is explicitly provided
+        default: "1.0.0"
+
+        # Input has to be provided for the workflow to run
+        required: true
+
+
+jobs:
+  build:
+    name: Publish Docker Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
+        with:
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_PASSWORD}}
+
+      - name: Build and push image to Dockerhub
+        run: |
+          docker build -f webapi.dockerfile -t genocs/telegram_integration-webapi:${{github.event.inputs.version}} -t genocs/telegram_integration-webapi:latest .
+          docker push genocs/telegram_integration-webapi:${{github.event.inputs.version}}
+          docker push genocs/telegram_integration-webapi:latest
