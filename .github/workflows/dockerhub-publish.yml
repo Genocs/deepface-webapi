@@ -36,6 +36,6 @@ jobs:
 
       - name: Build and push image to Dockerhub
         run: |
-          docker build -f webapi.dockerfile -t genocs/telegram_integration-webapi:${{github.event.inputs.version}} -t genocs/telegram_integration-webapi:latest .
-          docker push genocs/telegram_integration-webapi:${{github.event.inputs.version}}
-          docker push genocs/telegram_integration-webapi:latest
+          docker build -f webapi.dockerfile -t genocs/deepface-webapi:${{github.event.inputs.version}} -t genocs/deepface-webapi:latest .
+          docker push genocs/deepface-webapi:${{github.event.inputs.version}}
+          docker push genocs/deepface-webapi:latest
