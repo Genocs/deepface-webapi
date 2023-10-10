@@ -1,7 +1,7 @@
 FROM python:3.9.13
 
 # http port exposed outside the container
-EXPOSE 5000
+EXPOSE 5400
 
 # Set the Current Working Directory inside the container
 WORKDIR /app

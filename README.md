@@ -50,8 +50,8 @@ Face Mach Python WebApi based on DeepFace.
 
 Tested with:
 
-- python 3.11.3
-- pip 23.2.1
+> - python 3.9.13
+> - pip 23.2.1
 
 ```bash
 docker build -t genocs/deep_face-webapi .

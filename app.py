@@ -1,6 +1,5 @@
 import io
 from deepface import DeepFace
-import requests
 from PIL import Image
 import os
 from flask import Flask, request, jsonify
