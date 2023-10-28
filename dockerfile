@@ -19,10 +19,8 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y python3-opencv
 RUN pip install opencv-python
 
-RUN echo "Flask==2.1.0" > requirements.txt
+COPY ./requirements.txt .
 RUN pip install -r requirements.txt
-RUN pip install deepface
-RUN pip install Werkzeug==2.2.2
 
 # Copy the source code into the container 
 COPY ./src/ ./src/

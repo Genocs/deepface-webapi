@@ -1,9 +1,21 @@
 version: '3.9'
 services:
   deep-face-webpi:
-    image: deep-face-webpi:latest
-    build: .
+    image: deep-face-webpi
     ports:
       - 8000:8000
-    working_dir: /home/appuser/app/
-    command: [ "chainlit", "run", "/home/appuser/app/src/main.py" ]
+
+    networks:
+      - genocs
+    # network_mode: host
+    volumes:
+      - deep-face:/root
+
+networks:
+  genocs:
+    name: genocs-network
+    external: true
+
+volumes:
+  deep-face:
+    driver: local

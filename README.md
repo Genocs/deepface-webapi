@@ -57,7 +57,7 @@ Tested with:
     
 ```bash
 pip install -r requirements.txt
-python src/app.py
+python src/main.py
 ```
 
 
@@ -109,6 +109,3 @@ Become a financial contributor and help me sustain the project. [Support the Pro
 <a href="https://opencollective.com/genocs"><img src="https://opencollective.com/genocs/individuals.svg?width=890"></a>
 
 ## Acknowledgements
-
-- 🤗[nickmuchi](https://huggingface.co/spaces/nickmuchi/DeepFace)
-- [DeepFace](https://github.com/serengil/deepface)

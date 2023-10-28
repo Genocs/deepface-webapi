@@ -9,10 +9,10 @@ packages = []
 
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "3.9.13"
 Flask = "2.1.0"
 Werkzeug = "2.2.2"
-deepface = "0.0.21"
+deepface = "0.0.79"
 
 [build-system]
 requires = ["poetry-core"]
