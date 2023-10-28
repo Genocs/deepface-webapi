@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "deep-face-webapi"
+version = "0.0.1"
+description = "A deep face webapi"
+authors = ["Nocco Giovanni Emanuele"]
+license = "MIT"
+readme = "README.md"
+packages = []
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "2.1.0"
+Werkzeug = "2.2.2"
+deepface = "0.0.21"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

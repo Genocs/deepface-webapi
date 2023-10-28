@@ -24,10 +24,8 @@ RUN pip install -r requirements.txt
 RUN pip install deepface
 RUN pip install Werkzeug==2.2.2
 
-
-
-# Copy the source code into the conatainer 
-COPY app.py .
+# Copy the source code into the container 
+COPY ./src/ ./src/
 
 # Run the application
-CMD ["python", "app.py"]
+CMD ["python", "src/main.py"]

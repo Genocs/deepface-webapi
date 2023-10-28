@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  deep-face-webpi:
+    image: deep-face-webpi:latest
+    build: .
+    ports:
+      - 8000:8000
+    working_dir: /home/appuser/app/
+    command: [ "chainlit", "run", "/home/appuser/app/src/main.py" ]

@@ -53,9 +53,20 @@ Tested with:
 > - python 3.9.13
 > - pip 23.2.1
 
+## Build and run locally
+    
+```bash
+pip install -r requirements.txt
+python src/app.py
+```
+
+
+
+## Build Docker Image
+
 ```bash
 docker build -t genocs/deep_face-webapi .
-docker run --name deep_face-webapi-container -p 5400:5400 genocs/genocs/deep_face-webapi
+docker run --name deep_face-webapi-container -p 5400:5400 genocs/deep_face-webapi
 ```
 
 ## License
